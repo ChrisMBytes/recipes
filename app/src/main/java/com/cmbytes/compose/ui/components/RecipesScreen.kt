@@ -26,7 +26,7 @@ fun RecipesScreen(
     items: List<Recipe>,
     navigateTo: (Screen) -> Unit,
 ) {
-    Column(modifier = Modifier.padding(bottom = 10.dp)) {
+    Column(modifier = Modifier.background(color = Color.White)) {
         Surface(
             modifier = Modifier.fillMaxWidth(),
             elevation = 12.dp,

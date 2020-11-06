@@ -49,7 +49,7 @@ fun RecipeScreen(
     selectedTabIndex: Int,
     navigateTo: (Section) -> Unit,
 ) {
-    Column {
+    Column(modifier = Modifier.background(color = Color.White)) {
         RecipeBanner(recipe)
         RecipeTabs(recipe, selectedTabIndex) { index ->
             navigateTo(
