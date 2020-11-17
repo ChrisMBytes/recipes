@@ -1,6 +1,6 @@
 package com.cmbytes.compose.repository.mappers
 
-import com.cmbytes.compose.api.StepNet
+import com.cmbytes.compose.network.models.StepNet
 import com.cmbytes.compose.domain.models.Step
 import javax.inject.Inject
 

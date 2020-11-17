@@ -1,7 +1,7 @@
 package com.cmbytes.compose.ui.components
 
 import androidx.compose.animation.Crossfade
-import androidx.compose.foundation.Text
+import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -25,7 +25,7 @@ import com.cmbytes.compose.domain.models.Step
 import com.cmbytes.compose.recipe.presentation.navigation.Section
 import com.cmbytes.compose.recipe.presentation.store.RecipeState
 import com.cmbytes.compose.recipe.presentation.store.RecipeState.CurrentRecipe
-import com.luca992.compose.image.CoilImage
+import dev.chrisbanes.accompanist.coil.CoilImage
 
 @Composable
 fun RecipeScreenState(
@@ -39,7 +39,7 @@ fun RecipeScreenState(
             selectedTabIndex,
             navigateTo
         )
-        else -> Text(text = "Loading")
+        else -> BasicText(text = "Loading")
     }
 }
 
@@ -65,12 +65,12 @@ fun RecipeScreen(
 @Composable
 fun RecipeBanner(recipe: Recipe) {
     Box(modifier = Modifier.fillMaxWidth()) {
-        CoilImage(model = recipe.image, modifier = Modifier.fillMaxWidth().preferredHeight(360.dp))
+        CoilImage(data = recipe.image, modifier = Modifier.fillMaxWidth().preferredHeight(360.dp))
         Box(
             modifier = Modifier.fillMaxWidth().preferredHeight(360.dp)
                 .background(color = Color(0xFF80282928), shape = RectangleShape)
         )
-        Text(
+        BasicText(
             text = recipe.title,
             modifier = Modifier.align(Alignment.BottomStart)
                 .padding(start = 25.dp, end = 33.dp, bottom = 15.dp),
@@ -112,7 +112,7 @@ fun RecipeTabs(
                     else -> if (recipe.analyzedInstructions.isNotEmpty()) {
                         InstructionsCard(recipe.analyzedInstructions[0].steps)
                     } else {
-                        Text(text = "No data")
+                        BasicText(text = "No data")
                     }
                 }
             }
@@ -123,10 +123,12 @@ fun RecipeTabs(
 @Composable
 fun RecipeTab(selected: Boolean, onClick: () -> Unit, text: String) {
     Tab(selected = selected, onClick = onClick) {
-        Text(
+        BasicText(
             text = text,
-            color = if (selected) Color.Black else Color(0xFF606060),
-            fontSize = 16.sp,
+            style = TextStyle(
+                fontSize = 16.sp,
+                color = if (selected) Color.Black else Color(0xFF606060)
+            ),
             modifier = Modifier.align(alignment = Alignment.Start).padding(start = 6.dp)
         )
     }
@@ -146,7 +148,7 @@ fun Ingredient(image: String, name: String) {
             "https://spoonacular.com/cdn/ingredients_100x100/$image",
             modifier = Modifier.height(50.dp).width(50.dp).clip(CircleShape).clipToBounds()
         )
-        Text(
+        BasicText(
             text = name,
             modifier = Modifier.padding(start = 16.dp).align(Alignment.CenterVertically)
         )
@@ -166,18 +168,20 @@ fun InstructionsCard(instructions: List<Step>) {
 @Composable
 fun Instruction(number: String, description: String) {
     Row(modifier = Modifier.padding(bottom = 20.dp)) {
-        Text(
+        BasicText(
             text = number,
-            fontSize = 12.sp,
-            color = MaterialTheme.colors.secondary,
-            textAlign = TextAlign.Center,
+            style = TextStyle(
+                fontSize = 12.sp,
+                color = MaterialTheme.colors.secondary,
+                textAlign = TextAlign.Center
+            ),
             modifier = Modifier.height(20.dp).width(20.dp)
                 .border(1.dp, MaterialTheme.colors.secondary, shape = CircleShape)
                 .align(Alignment.Top),
         )
-        Text(
+        BasicText(
             text = description,
-            fontSize = 14.sp,
+            style = TextStyle(fontSize = 14.sp),
             modifier = Modifier.padding(start = 16.dp).align(Alignment.CenterVertically)
         )
     }

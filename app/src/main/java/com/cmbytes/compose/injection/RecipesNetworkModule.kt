@@ -1,6 +1,6 @@
 package com.cmbytes.compose.injection
 
-import com.cmbytes.compose.api.RecipesApi
+import com.cmbytes.compose.network.api.RecipesApi
 import com.cmbytes.compose.network.RecipesDataSource
 import com.cmbytes.compose.network.RecipesDataSourceImpl
 import dagger.Module

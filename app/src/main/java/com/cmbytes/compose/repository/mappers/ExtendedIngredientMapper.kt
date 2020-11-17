@@ -1,6 +1,6 @@
 package com.cmbytes.compose.repository.mappers
 
-import com.cmbytes.compose.api.ExtendedIngredientNet
+import com.cmbytes.compose.network.models.ExtendedIngredientNet
 import com.cmbytes.compose.domain.models.ExtendedIngredient
 import javax.inject.Inject
 

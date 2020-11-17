@@ -1,6 +1,6 @@
 package com.cmbytes.compose.repository.mappers
 
-import com.cmbytes.compose.api.LengthNet
+import com.cmbytes.compose.network.models.LengthNet
 import com.cmbytes.compose.domain.models.Length
 import javax.inject.Inject
 

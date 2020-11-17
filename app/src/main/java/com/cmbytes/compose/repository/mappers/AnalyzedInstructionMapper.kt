@@ -1,6 +1,6 @@
 package com.cmbytes.compose.repository.mappers
 
-import com.cmbytes.compose.api.AnalyzedInstructionNet
+import com.cmbytes.compose.network.models.AnalyzedInstructionNet
 import com.cmbytes.compose.domain.models.AnalyzedInstruction
 import javax.inject.Inject
 

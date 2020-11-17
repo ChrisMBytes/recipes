@@ -1,10 +1,10 @@
 package com.cmbytes.compose.ui.components
 
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumnFor
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.text.BasicText
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -14,12 +14,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.cmbytes.compose.domain.models.Recipe
 import com.cmbytes.compose.presentation.navigation.Screen
-import com.luca992.compose.image.CoilImage
 import com.cmbytes.compose.R
+import dev.chrisbanes.accompanist.coil.*
 
 @Composable
 fun RecipesScreen(
@@ -31,9 +32,9 @@ fun RecipesScreen(
             modifier = Modifier.fillMaxWidth(),
             elevation = 12.dp,
         ) {
-            Text(
+            BasicText(
                 text = stringResource(R.string.recipes_title),
-                fontSize = 24.sp,
+                style = TextStyle(fontSize = 24.sp),
                 modifier = Modifier.padding(start = 25.dp, top = 17.dp, bottom = 10.dp)
             )
         }
@@ -53,7 +54,7 @@ fun RecipesScreen(
 fun RecipeCard(navigateTo: (Screen) -> Unit, recipe: Recipe, modifier: Modifier = Modifier) {
     Card(modifier = modifier, elevation = 6.dp) {
         Box {
-            CoilImage(recipe.image)
+            CoilImage(data = recipe.image, modifier = Modifier.fillMaxWidth().height(230.dp))
             Column(Modifier.background(Color.White).height(120.dp).align(Alignment.BottomCenter)) {
                 RecipeTitle(recipe.title)
                 Row(
@@ -62,18 +63,18 @@ fun RecipeCard(navigateTo: (Screen) -> Unit, recipe: Recipe, modifier: Modifier 
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     val textColor = remember { Color(0xFF606060) }
-                    Text(
+                    BasicText(
                         text = "± " + recipe.readyInMinutes + " mins",
-                        color = textColor,
+                        style = TextStyle(color = textColor),
                         modifier = Modifier.padding(end = 12.dp)
                     )
                     Box(
                         modifier = Modifier.padding(top = 2.dp)
                             .background(color = textColor, shape = CircleShape).preferredSize(4.dp)
                     )
-                    Text(
+                    BasicText(
                         text = stringResource(R.string.recipes_ingredients),
-                        color = textColor,
+                        style = TextStyle(color = textColor),
                         modifier = Modifier.padding(start = 12.dp)
                     )
                     val color = MaterialTheme.colors.secondary

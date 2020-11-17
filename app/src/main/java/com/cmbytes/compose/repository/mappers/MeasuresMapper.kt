@@ -1,6 +1,6 @@
 package com.cmbytes.compose.repository.mappers
 
-import com.cmbytes.compose.api.MeasuresNet
+import com.cmbytes.compose.network.models.MeasuresNet
 import com.cmbytes.compose.domain.models.Measures
 import javax.inject.Inject
 
