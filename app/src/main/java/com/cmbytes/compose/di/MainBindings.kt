@@ -7,6 +7,6 @@ import dagger.android.ContributesAndroidInjector
 @Module
 abstract class MainBindings {
 
-    @ContributesAndroidInjector(modules = [AppModule::class])
+    @ContributesAndroidInjector(modules = [RecipesPresentationModule::class])
     abstract fun bindMainActivity(): MainActivity
 }

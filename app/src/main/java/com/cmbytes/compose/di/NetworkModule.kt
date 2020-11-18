@@ -1,6 +1,6 @@
 package com.cmbytes.compose.di
 
-import com.cmbytes.compose.BuildConfig
+import com.cmbytes.compose.network.configs.HttpConfig
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -18,11 +18,12 @@ object NetworkModule {
     @Singleton
     @Provides
     fun provideReceiptApi(
+        httpConfig: HttpConfig,
         okHttpClient: OkHttpClient,
         converterFactory: Converter.Factory
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.HTTP_SERVER_BASE_URL)
+            .baseUrl(httpConfig.baseUrl)
             .client(okHttpClient)
             .addConverterFactory(converterFactory)
             .build()

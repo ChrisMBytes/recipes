@@ -12,7 +12,7 @@ import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-object StateModel {
+object StateModule {
 
     // Should be scoped to the Composes component
     @Singleton

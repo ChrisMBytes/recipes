@@ -1,4 +1,4 @@
-package com.cmbytes.compose.presentation.navigation
+package com.cmbytes.compose.presentation.viewmodels.navigation.models
 
 sealed class Screen {
     object Home: Screen()

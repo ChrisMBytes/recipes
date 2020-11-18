@@ -1,4 +1,4 @@
-package com.cmbytes.compose.viewmodel.factory
+package com.cmbytes.compose.presentation.viewmodels.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

@@ -18,7 +18,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.cmbytes.compose.domain.models.Recipe
-import com.cmbytes.compose.presentation.navigation.Screen
+import com.cmbytes.compose.presentation.viewmodels.navigation.models.Screen
 import com.cmbytes.compose.R
 import dev.chrisbanes.accompanist.coil.*
 

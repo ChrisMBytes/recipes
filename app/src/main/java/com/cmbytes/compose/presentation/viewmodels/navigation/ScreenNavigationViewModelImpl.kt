@@ -1,10 +1,10 @@
-package com.cmbytes.compose.presentation.viewmodels
+package com.cmbytes.compose.presentation.viewmodels.navigation
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.cmbytes.compose.presentation.navigation.Screen
+import com.cmbytes.compose.presentation.viewmodels.navigation.models.Screen
 
 class ScreenNavigationViewModelImpl : ViewModel(), ScreenNavigationViewModel {
 

@@ -9,8 +9,8 @@ import com.cmbytes.compose.domain.usecases.GetRecipes
 import com.cmbytes.compose.presentation.proxy.RecipesProxy
 import com.cmbytes.compose.presentation.proxy.RecipesProxyImpl
 import com.cmbytes.compose.presentation.store.Reducer
-import com.cmbytes.compose.presentation.viewmodels.ScreenNavigationViewModel
-import com.cmbytes.compose.presentation.viewmodels.ScreenNavigationViewModelImpl
+import com.cmbytes.compose.presentation.viewmodels.navigation.ScreenNavigationViewModel
+import com.cmbytes.compose.presentation.viewmodels.navigation.ScreenNavigationViewModelImpl
 import com.cmbytes.compose.recipe.presentation.store.RecipeAction
 import com.cmbytes.compose.recipe.presentation.store.RecipeState
 import com.cmbytes.compose.recipe.presentation.viewmodels.RecipeViewModel
@@ -21,7 +21,7 @@ import com.cmbytes.compose.recipes.presentation.store.RecipesAction
 import com.cmbytes.compose.recipes.presentation.store.RecipesState
 import com.cmbytes.compose.recipes.presentation.viewmodels.RecipesViewModel
 import com.cmbytes.compose.recipes.presentation.viewmodels.RecipesViewModelImpl
-import com.cmbytes.compose.viewmodel.factory.ViewModelFactory
+import com.cmbytes.compose.presentation.viewmodels.factory.ViewModelFactory
 import dagger.Module
 import dagger.Provides
 import dagger.multibindings.IntoMap
@@ -33,7 +33,7 @@ import dagger.multibindings.IntoMap
         RecipesDomainModule::class
     ]
 )
-object AppModule {
+object RecipesPresentationModule {
 
     @Provides
     fun provideCoroutineDispatchers(): CoroutineDispatchers =
