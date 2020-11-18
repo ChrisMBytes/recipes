@@ -1,5 +1,6 @@
-package com.cmbytes.compose.injection
+package com.cmbytes.compose.di
 
+import com.cmbytes.compose.BuildConfig
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -21,7 +22,7 @@ object NetworkModule {
         converterFactory: Converter.Factory
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://api.spoonacular.com/recipes/")
+            .baseUrl(BuildConfig.HTTP_SERVER_BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(converterFactory)
             .build()

@@ -1,4 +1,4 @@
-package com.cmbytes.compose.injection
+package com.cmbytes.compose.di
 
 import android.app.Application
 import com.cmbytes.compose.App

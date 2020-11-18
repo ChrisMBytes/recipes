@@ -1,6 +1,6 @@
 package com.cmbytes.compose
 
-import com.cmbytes.compose.injection.DaggerAppComponent
+import com.cmbytes.compose.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 

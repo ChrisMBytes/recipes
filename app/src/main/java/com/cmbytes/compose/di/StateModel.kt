@@ -1,4 +1,4 @@
-package com.cmbytes.compose.injection
+package com.cmbytes.compose.di
 
 import com.cmbytes.compose.presentation.store.Reducer
 import com.cmbytes.compose.recipe.presentation.store.RecipeAction

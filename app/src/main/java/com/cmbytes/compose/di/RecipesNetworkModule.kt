@@ -1,4 +1,4 @@
-package com.cmbytes.compose.injection
+package com.cmbytes.compose.di
 
 import com.cmbytes.compose.network.api.RecipesApi
 import com.cmbytes.compose.network.RecipesDataSource

@@ -4,10 +4,10 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumnFor
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.text.BasicText
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -32,7 +32,7 @@ fun RecipesScreen(
             modifier = Modifier.fillMaxWidth(),
             elevation = 12.dp,
         ) {
-            BasicText(
+            Text(
                 text = stringResource(R.string.recipes_title),
                 style = TextStyle(fontSize = 24.sp),
                 modifier = Modifier.padding(start = 25.dp, top = 17.dp, bottom = 10.dp)
@@ -63,7 +63,7 @@ fun RecipeCard(navigateTo: (Screen) -> Unit, recipe: Recipe, modifier: Modifier 
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     val textColor = remember { Color(0xFF606060) }
-                    BasicText(
+                    Text(
                         text = "± " + recipe.readyInMinutes + " mins",
                         style = TextStyle(color = textColor),
                         modifier = Modifier.padding(end = 12.dp)
@@ -72,7 +72,7 @@ fun RecipeCard(navigateTo: (Screen) -> Unit, recipe: Recipe, modifier: Modifier 
                         modifier = Modifier.padding(top = 2.dp)
                             .background(color = textColor, shape = CircleShape).preferredSize(4.dp)
                     )
-                    BasicText(
+                    Text(
                         text = stringResource(R.string.recipes_ingredients),
                         style = TextStyle(color = textColor),
                         modifier = Modifier.padding(start = 12.dp)

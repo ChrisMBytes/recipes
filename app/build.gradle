@@ -16,6 +16,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "HTTP_SERVER_BASE_URL", "\"https://api.spoonacular.com/recipes/\"")
     }
 
     buildTypes {
@@ -84,6 +86,9 @@ dependencies {
 
     //test
     testImplementation 'junit:junit:4.13.1'
+    testImplementation "io.mockk:mockk:1.10.0"
+    testImplementation "org.assertj:assertj-core:3.11.1"
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation("androidx.ui:ui-test:$compose_version")
 }

@@ -1,4 +1,4 @@
-package com.cmbytes.compose.injection
+package com.cmbytes.compose.di
 
 import com.cmbytes.compose.domain.usecases.GetRecipes
 import com.cmbytes.compose.domain.usecases.RecipesRepository

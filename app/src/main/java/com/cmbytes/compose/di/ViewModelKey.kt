@@ -1,4 +1,4 @@
-package com.cmbytes.compose.injection
+package com.cmbytes.compose.di
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

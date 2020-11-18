@@ -1,7 +1,6 @@
 package com.cmbytes.compose.ui.components
 
 import androidx.compose.animation.Crossfade
-import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -39,7 +38,7 @@ fun RecipeScreenState(
             selectedTabIndex,
             navigateTo
         )
-        else -> BasicText(text = "Loading")
+        else -> Text(text = "Loading")
     }
 }
 
@@ -70,7 +69,7 @@ fun RecipeBanner(recipe: Recipe) {
             modifier = Modifier.fillMaxWidth().preferredHeight(360.dp)
                 .background(color = Color(0xFF80282928), shape = RectangleShape)
         )
-        BasicText(
+        Text(
             text = recipe.title,
             modifier = Modifier.align(Alignment.BottomStart)
                 .padding(start = 25.dp, end = 33.dp, bottom = 15.dp),
@@ -112,7 +111,7 @@ fun RecipeTabs(
                     else -> if (recipe.analyzedInstructions.isNotEmpty()) {
                         InstructionsCard(recipe.analyzedInstructions[0].steps)
                     } else {
-                        BasicText(text = "No data")
+                        Text(text = "No data")
                     }
                 }
             }
@@ -123,7 +122,7 @@ fun RecipeTabs(
 @Composable
 fun RecipeTab(selected: Boolean, onClick: () -> Unit, text: String) {
     Tab(selected = selected, onClick = onClick) {
-        BasicText(
+        Text(
             text = text,
             style = TextStyle(
                 fontSize = 16.sp,
@@ -148,7 +147,7 @@ fun Ingredient(image: String, name: String) {
             "https://spoonacular.com/cdn/ingredients_100x100/$image",
             modifier = Modifier.height(50.dp).width(50.dp).clip(CircleShape).clipToBounds()
         )
-        BasicText(
+        Text(
             text = name,
             modifier = Modifier.padding(start = 16.dp).align(Alignment.CenterVertically)
         )
@@ -168,7 +167,7 @@ fun InstructionsCard(instructions: List<Step>) {
 @Composable
 fun Instruction(number: String, description: String) {
     Row(modifier = Modifier.padding(bottom = 20.dp)) {
-        BasicText(
+        Text(
             text = number,
             style = TextStyle(
                 fontSize = 12.sp,
@@ -179,7 +178,7 @@ fun Instruction(number: String, description: String) {
                 .border(1.dp, MaterialTheme.colors.secondary, shape = CircleShape)
                 .align(Alignment.Top),
         )
-        BasicText(
+        Text(
             text = description,
             style = TextStyle(fontSize = 14.sp),
             modifier = Modifier.padding(start = 16.dp).align(Alignment.CenterVertically)
