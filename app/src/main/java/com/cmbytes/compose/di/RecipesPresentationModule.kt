@@ -1,7 +1,7 @@
 package com.cmbytes.compose.di
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import com.cmbytes.compose.MainActivity
 import com.cmbytes.compose.coroutines.CoroutineDispatchers
 import com.cmbytes.compose.coroutines.CoroutineDispatchersProvider
@@ -44,7 +44,7 @@ object RecipesPresentationModule {
         activity: MainActivity,
         factory: ViewModelFactory
     ): SectionNavigationViewModel =
-        ViewModelProviders.of(
+        ViewModelProvider(
             activity,
             factory
         ).get(SectionNavigationViewModelImpl::class.java)
@@ -59,7 +59,7 @@ object RecipesPresentationModule {
         activity: MainActivity,
         factory: ViewModelFactory
     ): ScreenNavigationViewModel =
-        ViewModelProviders.of(
+        ViewModelProvider(
             activity,
             factory
         ).get(ScreenNavigationViewModelImpl::class.java)
@@ -74,7 +74,7 @@ object RecipesPresentationModule {
         activity: MainActivity,
         factory: ViewModelFactory
     ): RecipesViewModel =
-        ViewModelProviders.of(
+        ViewModelProvider(
             activity,
             factory
         ).get(RecipesViewModelImpl::class.java)
@@ -93,7 +93,7 @@ object RecipesPresentationModule {
         activity: MainActivity,
         factory: ViewModelFactory
     ): RecipeViewModel =
-        ViewModelProviders.of(
+        ViewModelProvider(
             activity,
             factory
         ).get(RecipeViewModelImpl::class.java)

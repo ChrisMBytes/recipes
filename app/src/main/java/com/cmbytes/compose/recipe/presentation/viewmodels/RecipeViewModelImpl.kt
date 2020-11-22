@@ -9,6 +9,7 @@ import com.cmbytes.compose.coroutines.CoroutineDispatchers
 import com.cmbytes.compose.presentation.proxy.RecipesProxy
 import com.cmbytes.compose.recipe.presentation.store.RecipeAction.Load
 import com.cmbytes.compose.recipe.presentation.store.RecipeState
+import com.cmbytes.compose.recipe.presentation.store.RecipeState.*
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -21,7 +22,7 @@ class RecipeViewModelImpl @Inject constructor(
 
     override val recipeState: RecipeState
         get() = _recipeState
-    private var _recipeState: RecipeState by mutableStateOf(RecipeState.Loading)
+    private var _recipeState: RecipeState by mutableStateOf(Loading)
 
     init {
         viewModelScope.launch(coroutineDispatchers.io) {
