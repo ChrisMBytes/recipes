@@ -13,9 +13,8 @@ import com.cmbytes.compose.recipe.presentation.store.RecipeState.*
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import javax.inject.Inject
 
-class RecipeViewModelImpl @Inject constructor(
+class RecipeViewModelImpl(
     private val recipesProxy: RecipesProxy,
     private val coroutineDispatchers: CoroutineDispatchers
 ) : ViewModel(), RecipeViewModel {

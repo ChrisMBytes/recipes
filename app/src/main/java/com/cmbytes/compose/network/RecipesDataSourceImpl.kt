@@ -4,9 +4,8 @@ import com.cmbytes.compose.network.models.RecipesNet
 import com.cmbytes.compose.network.api.RecipesApi
 import com.cmbytes.compose.domain.resulttypes.ResultType
 import com.cmbytes.compose.network.extensions.safeApiCall
-import javax.inject.Inject
 
-class RecipesDataSourceImpl @Inject constructor(
+class RecipesDataSourceImpl(
     private val recipesApi: RecipesApi
 ): RecipesDataSource {
 

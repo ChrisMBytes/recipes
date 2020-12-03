@@ -48,7 +48,7 @@ fun RecipeScreen(
     selectedTabIndex: Int,
     navigateTo: (Section) -> Unit,
 ) {
-    Column(modifier = Modifier.background(color = Color.White)) {
+    Column(modifier = Modifier.background(color = Color.White).fillMaxHeight()) {
         RecipeBanner(recipe)
         RecipeTabs(recipe, selectedTabIndex) { index ->
             navigateTo(
