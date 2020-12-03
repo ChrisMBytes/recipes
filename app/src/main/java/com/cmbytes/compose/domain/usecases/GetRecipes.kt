@@ -1,10 +1,8 @@
 package com.cmbytes.compose.domain.usecases
 
-import javax.inject.Inject
+import com.cmbytes.compose.domain.repositories.RecipesRepository
 
-class GetRecipes @Inject constructor(
-    private val recipesRepository: RecipesRepository
-) {
+class GetRecipes(private val recipesRepository: RecipesRepository) {
 
     suspend operator fun invoke() = recipesRepository.getRecipes()
 }

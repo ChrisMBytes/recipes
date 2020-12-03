@@ -26,13 +26,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.multibindings.IntoMap
 
-@Module(
-    includes = [
-        AppBindingModule::class,
-        RecipesNetworkModule::class,
-        RecipesDomainModule::class
-    ]
-)
+@Module(includes = [RecipesDomainModule::class])
 object RecipesPresentationModule {
 
     @Provides

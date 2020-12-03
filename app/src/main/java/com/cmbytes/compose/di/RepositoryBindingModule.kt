@@ -1,12 +1,12 @@
 package com.cmbytes.compose.di
 
-import com.cmbytes.compose.domain.usecases.RecipesRepository
+import com.cmbytes.compose.domain.repositories.RecipesRepository
 import com.cmbytes.compose.repository.RecipesRepositoryImpl
 import dagger.Binds
 import dagger.Module
 
-@Module
-internal interface AppBindingModule {
+@Module(includes = [RecipesNetworkModule::class])
+internal interface RepositoryBindingModule {
 
     @Binds
     fun provideRecipesRepository(
