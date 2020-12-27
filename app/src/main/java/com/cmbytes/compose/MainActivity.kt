@@ -8,6 +8,7 @@ import androidx.compose.ui.platform.setContent
 import com.cmbytes.compose.presentation.viewmodels.navigation.models.Screen
 import com.cmbytes.compose.recipes.presentation.viewmodels.RecipesViewModel
 import com.cmbytes.compose.presentation.viewmodels.navigation.ScreenNavigationViewModel
+import com.cmbytes.compose.presentation.viewmodels.navigation.models.Screen.*
 import com.cmbytes.compose.recipe.presentation.viewmodels.RecipeViewModel
 import com.cmbytes.compose.recipe.presentation.viewmodels.SectionNavigationViewModel
 import com.cmbytes.compose.ui.components.RecipeScreenState
@@ -48,11 +49,11 @@ class MainActivity : AppCompatActivity() {
     private fun ScreenContent() {
         Crossfade(screenNavigationViewModel.currentScreen) { screen ->
             when (screen) {
-                is Screen.Home -> RecipesScreen(
+                is Home -> RecipesScreen(
                     recipesViewModel.recipes,
                     screenNavigationViewModel::navigateTo
                 )
-                is Screen.Detail -> {
+                is Detail -> {
                     recipeViewModel.load(screen.recipeId)
                     RecipeScreenState(
                         recipeViewModel.recipeState,

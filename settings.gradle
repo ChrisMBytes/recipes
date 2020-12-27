@@ -1,2 +1,3 @@
 rootProject.name = "Recipes"
-include ':app'
+include ':app', ':common'
+include ':common:presentation'
