@@ -1,6 +1,6 @@
 package com.cmbytes.compose.recipe.presentation.viewmodels
 
-import com.cmbytes.compose.domain.models.Recipe
+import com.cmbytes.compose.recipes.domain.models.Recipe
 import com.cmbytes.compose.presentation.proxy.RecipesProxy
 import com.cmbytes.compose.recipe.presentation.store.RecipeAction.*
 import com.cmbytes.compose.recipe.presentation.store.RecipeState

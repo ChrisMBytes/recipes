@@ -1,6 +1,6 @@
 package com.cmbytes.compose.recipes.presentation.store
 
-import com.cmbytes.compose.domain.models.Recipe
+import com.cmbytes.compose.recipes.domain.models.Recipe
 import com.cmbytes.compose.recipes.presentation.store.RecipesAction.*
 import com.cmbytes.compose.utils.BaseTest
 import org.assertj.core.api.Assertions.assertThat

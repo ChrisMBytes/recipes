@@ -1,8 +1,8 @@
 package com.cmbytes.compose.di
 
-import com.cmbytes.compose.network.api.RecipesApi
-import com.cmbytes.compose.network.RecipesDataSource
-import com.cmbytes.compose.network.RecipesDataSourceImpl
+import com.cmbytes.compose.recipes.network.api.RecipesApi
+import com.cmbytes.compose.recipes.network.RecipesDataSource
+import com.cmbytes.compose.recipes.network.RecipesDataSourceImpl
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

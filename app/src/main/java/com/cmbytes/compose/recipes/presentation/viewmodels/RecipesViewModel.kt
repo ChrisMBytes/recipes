@@ -1,6 +1,6 @@
 package com.cmbytes.compose.recipes.presentation.viewmodels
 
-import com.cmbytes.compose.domain.models.Recipe
+import com.cmbytes.compose.recipes.domain.models.Recipe
 
 interface RecipesViewModel {
 

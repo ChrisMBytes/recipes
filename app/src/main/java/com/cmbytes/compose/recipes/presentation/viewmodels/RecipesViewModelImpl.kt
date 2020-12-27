@@ -6,9 +6,9 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cmbytes.compose.coroutines.CoroutineDispatchers
-import com.cmbytes.compose.domain.models.Recipe
+import com.cmbytes.compose.recipes.domain.models.Recipe
 import com.cmbytes.compose.domain.resulttypes.ResultType
-import com.cmbytes.compose.domain.usecases.GetRecipes
+import com.cmbytes.compose.recipes.domain.usecases.GetRecipes
 import com.cmbytes.compose.presentation.store.Reducer
 import com.cmbytes.compose.recipes.presentation.store.RecipesAction
 import com.cmbytes.compose.recipes.presentation.store.RecipesAction.*

@@ -1,6 +1,6 @@
 package com.cmbytes.compose.recipe.presentation.store
 
-import com.cmbytes.compose.domain.models.Recipe
+import com.cmbytes.compose.recipes.domain.models.Recipe
 import com.cmbytes.compose.presentation.store.Reducer
 import com.cmbytes.compose.recipe.presentation.store.RecipeAction.Update
 import com.cmbytes.compose.recipe.presentation.store.RecipeState.CurrentRecipe

@@ -5,14 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.animation.Crossfade
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.setContent
-import com.cmbytes.compose.presentation.viewmodels.navigation.models.Screen
 import com.cmbytes.compose.recipes.presentation.viewmodels.RecipesViewModel
 import com.cmbytes.compose.presentation.viewmodels.navigation.ScreenNavigationViewModel
 import com.cmbytes.compose.presentation.viewmodels.navigation.models.Screen.*
 import com.cmbytes.compose.recipe.presentation.viewmodels.RecipeViewModel
 import com.cmbytes.compose.recipe.presentation.viewmodels.SectionNavigationViewModel
-import com.cmbytes.compose.ui.components.RecipeScreenState
-import com.cmbytes.compose.ui.components.RecipesScreen
+import com.cmbytes.compose.recipe.ui.RecipeScreenState
+import com.cmbytes.compose.recipes.ui.RecipesScreen
 import com.cmbytes.compose.ui.themes.RecipeTheme
 import dagger.android.AndroidInjection
 import javax.inject.Inject
