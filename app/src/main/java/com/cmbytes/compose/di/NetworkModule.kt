@@ -1,6 +1,6 @@
 package com.cmbytes.compose.di
 
-import com.cmbytes.compose.network.configs.HttpConfig
+import com.cmbytes.compose.general.configs.HttpConfig
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module

@@ -1,4 +1,4 @@
-package com.cmbytes.compose.coroutines
+package com.cmbytes.compose.general.coroutines
 
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject

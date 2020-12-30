@@ -1,4 +1,4 @@
-package com.cmbytes.compose.coroutines
+package com.cmbytes.compose.general.coroutines
 
 import kotlin.coroutines.CoroutineContext
 

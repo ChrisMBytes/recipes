@@ -5,7 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.cmbytes.compose.coroutines.CoroutineDispatchers
+import com.cmbytes.compose.general.coroutines.CoroutineDispatchers
 import com.cmbytes.compose.recipes.domain.models.Recipe
 import com.cmbytes.compose.domain.resulttypes.ResultType
 import com.cmbytes.compose.recipes.domain.usecases.GetRecipes

@@ -1,4 +1,4 @@
-package com.cmbytes.compose.ui.themes
+package com.cmbytes.compose.view.ui.themes
 
 import androidx.compose.ui.graphics.Color
 

@@ -12,7 +12,7 @@ import com.cmbytes.compose.recipe.presentation.viewmodels.RecipeViewModel
 import com.cmbytes.compose.recipe.presentation.viewmodels.SectionNavigationViewModel
 import com.cmbytes.compose.recipe.ui.RecipeScreenState
 import com.cmbytes.compose.recipes.ui.RecipesScreen
-import com.cmbytes.compose.ui.themes.RecipeTheme
+import com.cmbytes.compose.view.ui.themes.RecipeTheme
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
