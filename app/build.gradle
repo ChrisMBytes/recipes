@@ -56,6 +56,7 @@ dependencies {
     implementation project(':common:recipes:presentation')
     implementation project(':common:recipes:domain')
     implementation project(':features:recipes:domain')
+    implementation project(':features:recipes:network')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'

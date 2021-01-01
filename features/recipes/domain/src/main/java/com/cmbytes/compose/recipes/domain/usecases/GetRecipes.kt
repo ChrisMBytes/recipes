@@ -1,4 +1,4 @@
-package com.cmbytes.compose.recipes.usecases
+package com.cmbytes.compose.recipes.domain.usecases
 
 import com.cmbytes.compose.recipes.domain.repositories.RecipesRepository
 

@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.cmbytes.compose.MainActivity
 import com.cmbytes.compose.general.coroutines.CoroutineDispatchers
 import com.cmbytes.compose.general.coroutines.CoroutineDispatchersProvider
-import com.cmbytes.compose.recipes.usecases.GetRecipes
+import com.cmbytes.compose.recipes.domain.usecases.GetRecipes
 import com.cmbytes.compose.recipe.proxy.RecipesProxy
 import com.cmbytes.compose.recipe.proxy.RecipesProxyImpl
 import com.cmbytes.compose.presentation.store.Reducer
