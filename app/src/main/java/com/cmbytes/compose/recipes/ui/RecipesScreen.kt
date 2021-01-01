@@ -18,11 +18,11 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.cmbytes.compose.recipes.domain.models.Recipe
-import com.cmbytes.compose.presentation.viewmodels.navigation.models.Screen
+import com.cmbytes.compose.recipes.presentation.viewmodels.navigation.models.Screen
 import com.cmbytes.compose.R
-import com.cmbytes.compose.ui.components.RecipeButton
-import com.cmbytes.compose.ui.components.RecipeTitle
-import com.cmbytes.compose.ui.components.Triangle
+import com.cmbytes.compose.recipes.view.ui.components.RecipeButton
+import com.cmbytes.compose.recipes.view.ui.components.RecipeTitle
+import com.cmbytes.compose.recipes.view.ui.components.Triangle
 import dev.chrisbanes.accompanist.coil.*
 
 @Composable

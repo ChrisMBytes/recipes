@@ -1,7 +1,10 @@
 rootProject.name = "Recipes"
-include ':app', ':common', ':common:recipes'
+include ':app', ':common', ':common:recipes', ':features:recipe', ':features:recipes'
 include ':common:presentation'
 include ':common:domain'
 include ':common:network'
 include ':common:general'
 include ':common:recipes:view'
+include ':common:recipes:presentation'
+include ':common:recipes:domain'
+include ':features:recipes:domain'

@@ -1,6 +1,6 @@
 package com.cmbytes.compose.di
 
-import com.cmbytes.compose.recipes.domain.usecases.GetRecipes
+import com.cmbytes.compose.recipes.usecases.GetRecipes
 import com.cmbytes.compose.recipes.domain.repositories.RecipesRepository
 import dagger.Module
 import dagger.Provides

@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.sp
 import com.cmbytes.compose.recipes.domain.models.ExtendedIngredient
 import com.cmbytes.compose.recipes.domain.models.Recipe
 import com.cmbytes.compose.recipes.domain.models.Step
-import com.cmbytes.compose.recipe.presentation.navigation.Section
+import com.cmbytes.compose.recipe.presentation.viewmodels.navigation.models.Section
 import com.cmbytes.compose.recipe.presentation.store.RecipeState
 import com.cmbytes.compose.recipe.presentation.store.RecipeState.CurrentRecipe
 import dev.chrisbanes.accompanist.coil.CoilImage
