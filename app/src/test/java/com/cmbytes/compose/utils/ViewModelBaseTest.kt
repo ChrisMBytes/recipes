@@ -2,6 +2,7 @@ package com.cmbytes.compose.utils
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.cmbytes.compose.general.coroutines.CoroutineDispatchers
+import com.cmbytes.compose.testing.general.BaseTest
 import io.mockk.every
 import org.junit.Rule
 import org.junit.rules.TestRule

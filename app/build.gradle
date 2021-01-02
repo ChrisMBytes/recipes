@@ -100,6 +100,7 @@ dependencies {
     testImplementation "io.mockk:mockk:1.10.0"
     testImplementation "org.assertj:assertj-core:3.11.1"
     testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation project(':common:testing:general')
 
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
 //    androidTestImplementation "androidx.ui:ui-test:$compose_version"

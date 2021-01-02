@@ -1,10 +1,9 @@
-package com.cmbytes.compose.network
+package com.cmbytes.compose.recipes.network
 
 import com.cmbytes.compose.domain.resulttypes.ResultType
 import com.cmbytes.compose.recipes.network.api.RecipesApi
-import com.cmbytes.compose.recipes.network.RecipesDataSourceImpl
 import com.cmbytes.compose.recipes.network.models.RecipesNet
-import com.cmbytes.compose.utils.BaseTest
+import com.cmbytes.compose.testing.general.BaseTest
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every

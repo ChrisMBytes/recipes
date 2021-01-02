@@ -26,4 +26,10 @@ dependencies {
     implementation "com.squareup.moshi:moshi-kotlin-codegen:1.9.2"
     implementation "com.squareup.moshi:moshi-kotlin:1.10.0"
     kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.9.2'
+
+    //test
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation "io.mockk:mockk:1.10.0"
+    testImplementation "org.assertj:assertj-core:3.11.1"
+    testImplementation project(':common:testing:general')
 }

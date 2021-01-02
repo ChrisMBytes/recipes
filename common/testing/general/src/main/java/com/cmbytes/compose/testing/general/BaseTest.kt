@@ -1,13 +1,11 @@
-package com.cmbytes.compose.utils
+package com.cmbytes.compose.testing.general
 
-import androidx.annotation.CallSuper
-import com.cmbytes.compose.utils.rules.MockKRule
+import com.cmbytes.compose.testing.general.rules.MockKRule
 import io.mockk.MockK
 import io.mockk.MockKDsl
 import io.mockk.clearMocks
 import org.junit.After
 import org.junit.Rule
-import java.util.ArrayList
 import kotlin.reflect.KClass
 
 abstract class BaseTest {
@@ -18,7 +16,6 @@ abstract class BaseTest {
     val mockList = ArrayList<Any>()
 
     @After
-    @CallSuper
     fun resetMocks() {
         mockList.forEach {
             clearMocks(it)

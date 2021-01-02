@@ -1,4 +1,4 @@
-package com.cmbytes.compose.utils.rules
+package com.cmbytes.compose.testing.general.rules
 
 import io.mockk.MockKAnnotations
 import org.junit.rules.MethodRule
