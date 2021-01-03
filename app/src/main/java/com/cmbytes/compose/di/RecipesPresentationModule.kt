@@ -6,8 +6,8 @@ import com.cmbytes.compose.MainActivity
 import com.cmbytes.compose.general.coroutines.CoroutineDispatchers
 import com.cmbytes.compose.general.coroutines.CoroutineDispatchersProvider
 import com.cmbytes.compose.recipes.domain.usecases.GetRecipes
-import com.cmbytes.compose.recipe.proxy.RecipesProxy
-import com.cmbytes.compose.recipe.proxy.RecipesProxyImpl
+import com.cmbytes.compose.recipe.presentation.proxy.RecipesProxy
+import com.cmbytes.compose.recipe.presentation.proxy.RecipesProxyImpl
 import com.cmbytes.compose.presentation.store.Reducer
 import com.cmbytes.compose.recipes.presentation.viewmodels.navigation.ScreenNavigationViewModel
 import com.cmbytes.compose.recipes.presentation.viewmodels.navigation.ScreenNavigationViewModelImpl

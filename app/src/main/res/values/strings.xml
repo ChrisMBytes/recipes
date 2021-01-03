@@ -1,5 +1,3 @@
 <resources>
     <string name="app_name">Recipes</string>
-    <string name="recipes_title">Recipes</string>
-    <string name="recipes_ingredients">4 ingredients</string>
 </resources>

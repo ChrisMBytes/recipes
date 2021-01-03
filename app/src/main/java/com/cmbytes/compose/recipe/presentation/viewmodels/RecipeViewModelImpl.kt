@@ -6,7 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cmbytes.compose.general.coroutines.CoroutineDispatchers
-import com.cmbytes.compose.recipe.proxy.RecipesProxy
+import com.cmbytes.compose.recipe.presentation.proxy.RecipesProxy
 import com.cmbytes.compose.recipe.presentation.store.RecipeAction.Load
 import com.cmbytes.compose.recipe.presentation.store.RecipeState
 import com.cmbytes.compose.recipe.presentation.store.RecipeState.*

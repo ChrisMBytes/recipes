@@ -1,7 +1,7 @@
 package com.cmbytes.compose.recipe.presentation.viewmodels
 
 import com.cmbytes.compose.recipes.domain.models.Recipe
-import com.cmbytes.compose.recipe.proxy.RecipesProxy
+import com.cmbytes.compose.recipe.presentation.proxy.RecipesProxy
 import com.cmbytes.compose.recipe.presentation.store.RecipeAction.*
 import com.cmbytes.compose.recipe.presentation.store.RecipeState
 import com.cmbytes.compose.recipe.presentation.store.RecipeState.*

@@ -1,4 +1,4 @@
-package com.cmbytes.compose.recipe.proxy
+package com.cmbytes.compose.recipe.presentation.proxy
 
 import com.cmbytes.compose.recipe.presentation.store.RecipeAction
 import com.cmbytes.compose.recipe.presentation.store.RecipeState
