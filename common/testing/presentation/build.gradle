@@ -32,16 +32,9 @@ android {
 }
 
 dependencies {
-
-    implementation project(':common:presentation')
-    implementation project(':common:recipes:domain')
-
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation project(':common:testing:general')
+    implementation project(':common:general')
+    implementation "androidx.arch.core:core-testing:2.1.0"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
-
-    //test
-    testImplementation 'junit:junit:4.13.1'
-    testImplementation "io.mockk:mockk:1.10.0"
-    testImplementation "org.assertj:assertj-core:3.11.1"
-    testImplementation project(':common:testing:general')
+    implementation "io.mockk:mockk:1.10.0"
 }
