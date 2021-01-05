@@ -1,4 +1,4 @@
-package com.cmbytes.compose.recipe.ui
+package com.cmbytes.compose.recipe.view.ui
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.background

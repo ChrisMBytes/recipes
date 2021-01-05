@@ -10,7 +10,7 @@ import com.cmbytes.compose.recipes.presentation.viewmodels.navigation.ScreenNavi
 import com.cmbytes.compose.recipes.presentation.viewmodels.navigation.models.Screen.*
 import com.cmbytes.compose.recipe.presentation.viewmodels.RecipeViewModel
 import com.cmbytes.compose.recipe.presentation.viewmodels.navigation.SectionNavigationViewModel
-import com.cmbytes.compose.recipe.ui.RecipeScreenState
+import com.cmbytes.compose.recipe.view.ui.RecipeScreenState
 import com.cmbytes.compose.recipes.ui.RecipesScreen
 import com.cmbytes.compose.recipes.view.ui.themes.RecipeTheme
 import dagger.android.AndroidInjection
