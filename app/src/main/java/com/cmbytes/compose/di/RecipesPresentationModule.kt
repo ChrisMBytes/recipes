@@ -22,6 +22,7 @@ import com.cmbytes.compose.recipes.presentation.store.RecipesState
 import com.cmbytes.compose.recipes.presentation.viewmodels.RecipesViewModel
 import com.cmbytes.compose.recipes.presentation.viewmodels.RecipesViewModelImpl
 import com.cmbytes.compose.presentation.viewmodels.factory.ViewModelFactory
+import com.cmbytes.compose.recipes.di.RecipesDomainModule
 import dagger.Module
 import dagger.Provides
 import dagger.multibindings.IntoMap
