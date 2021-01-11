@@ -25,6 +25,7 @@ import com.cmbytes.compose.recipes.domain.models.Step
 import com.cmbytes.compose.recipe.presentation.viewmodels.navigation.models.Section
 import com.cmbytes.compose.recipe.presentation.store.RecipeState
 import com.cmbytes.compose.recipe.presentation.store.RecipeState.CurrentRecipe
+import com.cmbytes.compose.recipe.presentation.viewmodels.navigation.models.Section.*
 import dev.chrisbanes.accompanist.coil.CoilImage
 
 @Composable
@@ -54,8 +55,8 @@ fun RecipeScreen(
         RecipeTabs(recipe, selectedTabIndex) { index ->
             navigateTo(
                 when (index) {
-                    0 -> Section.Ingredients(index)
-                    else -> Section.HowToCook(index)
+                    0 -> Ingredients(index)
+                    else -> HowToCook(index)
                 }
             )
         }
