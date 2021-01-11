@@ -1,8 +1,8 @@
-package com.cmbytes.compose.recipes.ui
+package com.cmbytes.compose.recipes.view.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumnFor
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.cmbytes.compose.recipes.domain.models.Recipe
 import com.cmbytes.compose.recipes.presentation.viewmodels.navigation.models.Screen
+import com.cmbytes.compose.recipes.presentation.viewmodels.navigation.models.Screen.*
 import com.cmbytes.compose.recipes.view.R
 import com.cmbytes.compose.recipes.view.ui.components.RecipeButton
 import com.cmbytes.compose.recipes.view.ui.components.RecipeTitle
@@ -43,12 +44,14 @@ fun RecipesScreen(
         }
         val color = remember { Color(0xFF1e000000) }
         Spacer(modifier = Modifier.fillMaxWidth().height(4.dp).background(color = color))
-        LazyColumnFor(items = items, modifier = Modifier.padding(top = 10.dp)) { recipe ->
-            RecipeCard(
-                navigateTo = navigateTo,
-                recipe = recipe,
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 25.dp, vertical = 10.dp)
-            )
+        LazyColumn(modifier = Modifier.padding(top = 10.dp)) {
+            items(items) {
+                RecipeCard(
+                    navigateTo = navigateTo,
+                    recipe = it,
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 25.dp, vertical = 10.dp)
+                )
+            }
         }
     }
 }
@@ -80,18 +83,23 @@ fun RecipeCard(navigateTo: (Screen) -> Unit, recipe: Recipe, modifier: Modifier 
                         style = TextStyle(color = textColor),
                         modifier = Modifier.padding(start = 12.dp)
                     )
-                    val color = MaterialTheme.colors.secondary
-                    RecipeButton(
-                        onClick = { navigateTo(Screen.Detail(recipe.id)) },
-                        text = "Cook",
-                        color = color,
-                        modifier = Modifier.padding(start = 12.dp)
-                    ) {
-                        Triangle(color)
-                    }
+                    RecipeCardButton(navigateTo, recipe)
                 }
             }
         }
+    }
+}
+
+@Composable
+fun RecipeCardButton(navigateTo: (Screen) -> Unit, recipe: Recipe) {
+    val color = MaterialTheme.colors.secondary
+    RecipeButton(
+        onClick = { navigateTo(Detail(recipe.id)) },
+        text = "Cook",
+        color = color,
+        modifier = Modifier.padding(start = 12.dp)
+    ) {
+        Triangle(color)
     }
 }
 

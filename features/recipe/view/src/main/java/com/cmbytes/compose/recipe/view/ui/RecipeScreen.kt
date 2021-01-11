@@ -4,6 +4,7 @@ import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyColumnFor
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
@@ -85,9 +86,10 @@ fun RecipeTabs(
     onSelected: (Int) -> Unit
 ) {
     TabRow(
-        selectedTabIndex = selectedTabIndex,
         modifier = Modifier.preferredHeight(50.dp).padding(horizontal = 20.dp),
-        contentColor = MaterialTheme.colors.secondary,
+        backgroundColor = MaterialTheme.colors.surface,
+        contentColor = MaterialTheme.colors.primaryVariant,
+        selectedTabIndex = selectedTabIndex
     ) {
         RecipeTab(
             selected = selectedTabIndex == 0,
@@ -135,8 +137,10 @@ fun RecipeTab(selected: Boolean, onClick: () -> Unit, text: String) {
 
 @Composable
 fun IngredientsCard(ingredients: List<ExtendedIngredient>) {
-    LazyColumnFor(items = ingredients, modifier = Modifier.padding(14.dp)) { ingredient ->
-        Ingredient(ingredient.image, ingredient.name)
+    LazyColumn(modifier = Modifier.padding(14.dp)) {
+        items(ingredients) {
+            Ingredient(it.image, it.name)
+        }
     }
 }
 
