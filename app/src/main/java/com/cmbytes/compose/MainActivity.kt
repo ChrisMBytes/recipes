@@ -1,22 +1,22 @@
 package com.cmbytes.compose
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.ComponentActivity
 import androidx.compose.animation.Crossfade
+import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.setContent
 import com.cmbytes.compose.recipes.presentation.viewmodels.RecipesViewModel
 import com.cmbytes.compose.recipes.presentation.viewmodels.navigation.ScreenNavigationViewModel
 import com.cmbytes.compose.recipes.presentation.viewmodels.navigation.models.Screen.*
 import com.cmbytes.compose.recipe.presentation.viewmodels.RecipeViewModel
 import com.cmbytes.compose.recipe.presentation.viewmodels.navigation.SectionNavigationViewModel
 import com.cmbytes.compose.recipe.view.ui.RecipeScreenState
-import com.cmbytes.compose.recipes.ui.RecipesScreen
+import com.cmbytes.compose.recipes.view.ui.RecipesScreen
 import com.cmbytes.compose.recipes.view.ui.themes.RecipeTheme
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
 
     @Inject
     lateinit var recipesViewModel: RecipesViewModel

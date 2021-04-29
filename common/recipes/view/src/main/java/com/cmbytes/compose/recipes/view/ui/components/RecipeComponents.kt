@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun Triangle(color: Color) {
-    Canvas(modifier = Modifier.preferredSize(10.dp)) {
+    Canvas(modifier = Modifier.requiredSize(10.dp)) {
         drawLine(
             color = color,
             Offset(10f, 0f),

@@ -1,11 +1,13 @@
 package com.cmbytes.compose.recipe.view.ui
 
 import androidx.compose.animation.Crossfade
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyColumnFor
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
@@ -26,7 +28,7 @@ import com.cmbytes.compose.recipe.presentation.viewmodels.navigation.models.Sect
 import com.cmbytes.compose.recipe.presentation.store.RecipeState
 import com.cmbytes.compose.recipe.presentation.store.RecipeState.CurrentRecipe
 import com.cmbytes.compose.recipe.presentation.viewmodels.navigation.models.Section.*
-import dev.chrisbanes.accompanist.coil.CoilImage
+import com.google.accompanist.coil.rememberCoilPainter
 
 @Composable
 fun RecipeScreenState(
@@ -66,9 +68,13 @@ fun RecipeScreen(
 @Composable
 fun RecipeBanner(recipe: Recipe) {
     Box(modifier = Modifier.fillMaxWidth()) {
-        CoilImage(data = recipe.image, modifier = Modifier.fillMaxWidth().preferredHeight(360.dp))
+        Image(
+            painter = rememberCoilPainter(recipe.image),
+            contentDescription = "recipe",
+            modifier = Modifier.fillMaxWidth().requiredHeight(360.dp)
+        )
         Box(
-            modifier = Modifier.fillMaxWidth().preferredHeight(360.dp)
+            modifier = Modifier.fillMaxWidth().requiredHeight(360.dp)
                 .background(color = Color(0xFF80282928), shape = RectangleShape)
         )
         Text(
@@ -87,7 +93,7 @@ fun RecipeTabs(
     onSelected: (Int) -> Unit
 ) {
     TabRow(
-        modifier = Modifier.preferredHeight(50.dp).padding(horizontal = 20.dp),
+        modifier = Modifier.requiredHeight(50.dp).padding(horizontal = 20.dp),
         backgroundColor = MaterialTheme.colors.surface,
         contentColor = MaterialTheme.colors.primaryVariant,
         selectedTabIndex = selectedTabIndex
@@ -103,7 +109,8 @@ fun RecipeTabs(
             text = "How to Cook"
         )
     }
-    Crossfade(current = selectedTabIndex) { index ->
+    
+    Crossfade(targetState = selectedTabIndex, animationSpec = tween(3000)) { index ->
         Column(
             modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 16.dp, bottom = 20.dp)
                 .wrapContentHeight()
@@ -148,8 +155,9 @@ fun IngredientsCard(ingredients: List<ExtendedIngredient>) {
 @Composable
 fun Ingredient(image: String, name: String) {
     Row(modifier = Modifier.padding(bottom = 20.dp)) {
-        CoilImage(
-            "https://spoonacular.com/cdn/ingredients_100x100/$image",
+        Image(
+            painter = rememberCoilPainter("https://spoonacular.com/cdn/ingredients_100x100/$image"),
+            contentDescription = "recipe",
             modifier = Modifier.height(50.dp).width(50.dp).clip(CircleShape).clipToBounds()
         )
         Text(
@@ -161,11 +169,10 @@ fun Ingredient(image: String, name: String) {
 
 @Composable
 fun InstructionsCard(instructions: List<Step>) {
-    LazyColumnFor(
-        items = instructions,
-        modifier = Modifier.padding(16.dp)
-    ) { instruction ->
-        Instruction(instruction.number.toString(), instruction.step)
+    LazyColumn(modifier = Modifier.padding(16.dp)) {
+        items(items = instructions) { instruction ->
+            Instruction(instruction.number.toString(), instruction.step)
+        }
     }
 }
 

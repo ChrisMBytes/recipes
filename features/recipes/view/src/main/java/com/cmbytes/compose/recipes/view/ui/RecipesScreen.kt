@@ -1,13 +1,12 @@
 package com.cmbytes.compose.recipes.view.ui
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -24,7 +23,7 @@ import com.cmbytes.compose.recipes.view.R
 import com.cmbytes.compose.recipes.view.ui.components.RecipeButton
 import com.cmbytes.compose.recipes.view.ui.components.RecipeTitle
 import com.cmbytes.compose.recipes.view.ui.components.Triangle
-import dev.chrisbanes.accompanist.coil.*
+import com.google.accompanist.coil.rememberCoilPainter
 
 @Composable
 fun RecipesScreen(
@@ -60,7 +59,11 @@ fun RecipesScreen(
 fun RecipeCard(navigateTo: (Screen) -> Unit, recipe: Recipe, modifier: Modifier = Modifier) {
     Card(modifier = modifier, elevation = 6.dp) {
         Box {
-            CoilImage(data = recipe.image, modifier = Modifier.fillMaxWidth().height(230.dp))
+            Image(
+                painter = rememberCoilPainter(recipe.image),
+                contentDescription = "recipe",
+                modifier = Modifier.fillMaxWidth().height(230.dp)
+            )
             Column(Modifier.background(Color.White).height(120.dp).align(Alignment.BottomCenter)) {
                 RecipeTitle(recipe.title)
                 Row(
@@ -76,7 +79,7 @@ fun RecipeCard(navigateTo: (Screen) -> Unit, recipe: Recipe, modifier: Modifier 
                     )
                     Box(
                         modifier = Modifier.padding(top = 2.dp)
-                            .background(color = textColor, shape = CircleShape).preferredSize(4.dp)
+                            .background(color = textColor, shape = CircleShape).requiredSize(4.dp)
                     )
                     Text(
                         text = stringResource(R.string.recipes_ingredients),
